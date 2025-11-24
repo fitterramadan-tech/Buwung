@@ -1,0 +1,33 @@
+/* style.css */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #b3e5fc 0%, #81d4fa 50%, #4fc3f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#game-container {
+  width: 420px;
+  height: 640px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #87ceeb;
+}
+
+/* on small screens make the container responsive */
+@media (max-width: 480px) {
+  #game-container { width: 360px; height: 640px; }
+}
+
+/* HUD text fallback */
+.hud {
+  position: absolute;
+  z-index: 10;
+  left: 12px;
+  top: 12px;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
